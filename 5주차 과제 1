@@ -1,0 +1,22 @@
+def text2list(text):
+    return [int(num) for num in text.split()]
+
+def average(nums):
+    return sum(nums) / len(nums)
+
+def main():
+    input_text = "5 10 3 4 7"
+    nums = text2list(input_text)
+    print("주어진 리스트는", nums)
+    print(f"평균값은 {average(nums)}")
+    n = len(nums)
+    if n % 2 == 1:                               # 짝수와 홀수인 경우를 나누기
+        median_val = sorted(nums)[n//2]
+    else:
+        median_val = (sorted(nums)[n//2-1] + sorted(nums)[n//2]) / 2
+    print(f"중앙값은 {median_val}")
+    print(f"최솟값은 {min(nums)}")
+    print(f"최댓값은 {max(nums)}")
+
+if __name__ == "__main__":
+    main()
