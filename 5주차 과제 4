@@ -1,0 +1,12 @@
+calories = {"한라봉": 50, "딸기": 34, "바나나": 77}
+fruits = {"딸기": 300, "한라봉": 150}
+
+def main():
+    total_cal = 0
+    for fruit, weight in fruits.items():
+        total_cal += weight * calories[fruit] / 100
+
+    print(f"총 칼로리는 {total_cal} kcal입니다.")
+
+if __name__ == "__main__":
+    main()
